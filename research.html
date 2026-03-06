@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Research & Publications - Lokeswar Reddy</title>
+
+<style>
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #141e30, #243b55);
+  color:white;
+  padding-top:100px;
+}
+
+/* Navbar */
+header{
+  padding:20px 50px;
+  display:flex;
+  justify-content:flex-end;
+  background:rgba(0,0,0,0.5);
+  position:fixed;
+  width:100%;
+  top:0;
+  z-index:100;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:25px;
+}
+
+nav ul li a{
+  text-decoration:none;
+  color:white;
+  transition:0.3s;
+}
+
+nav ul li a:hover{
+  color:#00d4ff;
+}
+
+/* Container */
+.container{
+  width:80%;
+  margin:0 auto;
+}
+
+h1{
+  text-align:center;
+  margin-bottom:40px;
+  font-size:2.5rem;
+}
+
+/* Year Buttons */
+.year-list{
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  margin-bottom:40px;
+  flex-wrap: wrap;
+}
+
+.year-list button{
+  padding:10px 20px;
+  border:none;
+  background:rgba(255,255,255,0.1);
+  color:white;
+  font-size:1rem;
+  border-radius:8px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.year-list button:hover{
+  background:#00d4ff;
+  color:black;
+}
+
+/* Content Sections */
+.content-section{
+  background:rgba(255,255,255,0.08);
+  padding:25px 30px;
+  border-radius:12px;
+  line-height:1.8;
+  display:none; /* Hide by default */
+  transition:0.4s ease;
+  margin-bottom:20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<ul>
+<li><a href="index.html">HOME</a></li>
+<li><a href="about.html">ABOUT ME</a></li>
+<li><a href="education.html">EDUCATION</a></li>
+<li><a href="experience.html">EXPERIENCE</a></li>
+<li><a href="skills.html">SKILLS</a></li>
+<li><a href="research.html">RESEARCH & PUBLICATIONS</a></li>
+</ul>
+</nav>
+</header>
+
+<div class="container">
+
+<h1>RESEARCH & PUBLICATIONS</h1>
+
+<!-- Year Buttons -->
+<div class="year-list">
+  <button onclick="showYear('2025')">2025</button>
+  <button onclick="showYear('2024')">2024</button>
+  <button onclick="showYear('Ongoing')">Ongoing Projects</button>
+</div>
+
+<!-- Year 2025 Publications -->
+<div class="content-section" id="2025">
+  <strong>K. Lokeswar Reddy</strong>, co-authored <em>“Improving EFL Students' Reading Skills Using Graph Attention Networks and Intelligence-Based Tasks”</em><br>
+  <strong>Published in:</strong> 2025 3rd International Conference on Integrated Circuits and Communication Systems (ICICACS)<br>
+  <strong>Publisher:</strong> IEEE Xplore<br>
+  <strong>Date:</strong> 21–22 February 2025
+</div>
+
+<!-- Year 2024 Publications -->
+<div class="content-section" id="2024">
+  <strong>K. Lokeswar Reddy</strong>, co-authored <em>“Customer Segmentation in E-Commerce: A Machine Learning and Deep Learning-Enhanced Approach”</em><br>
+  <strong>Published in:</strong> 2024 3rd International Conference on Information, Communication, and Technology (ICICT)<br>
+  <strong>Publisher:</strong> IEEE Xplore<br>
+  <strong>Date:</strong> 13–14 December 2024
+</div>
+
+<!-- Ongoing Projects -->
+<div class="content-section" id="Ongoing">
+  <strong>Ongoing Student Project (Mentorship):</strong><br>
+  Investigating Ethereum Phishing Gangs in Action Using Blockchain Data – Mentoring final-year students
+</div>
+
+<script>
+function showYear(yearId){
+  const sections = document.querySelectorAll('.content-section');
+  
+  sections.forEach(section => {
+    if(section.id === yearId){
+      section.style.display = (section.style.display === 'block') ? 'none' : 'block';
+    } else {
+      section.style.display = 'none';
+    }
+  });
+}
+</script>
+
+</body>
+</html>

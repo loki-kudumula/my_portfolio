@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Professional Experience - Lokeswar Reddy</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+body{
+  min-height:100vh;
+      background:linear-gradient(135deg,#141e30,#243b55);
+      color:white;
+}
+
+/* Navbar */
+header{
+  padding:20px 50px;
+  display:flex;
+  justify-content:flex-end;
+  background:rgba(0,0,0,0.5);
+  position:fixed;
+  width:100%;
+  top:0;
+  z-index:1000;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:25px;
+}
+
+nav ul li a{
+  text-decoration:none;
+  color:white;
+  transition:0.3s;
+}
+
+nav ul li a:hover{
+  color:#00f5d4;
+}
+
+/* Container */
+.container{
+  width:85%;
+  margin:120px auto;
+}
+
+h1{
+  text-align:center;
+  margin-bottom:60px;
+  font-size:2.8rem;
+}
+
+/* Section Cards */
+.section{
+  background:rgba(255,255,255,0.08);
+  padding:35px;
+  border-radius:15px;
+  margin-bottom:40px;
+  backdrop-filter:blur(8px);
+  transform:translateY(60px);
+  opacity:0;
+  transition:all 1s ease;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+.section.show{
+  transform:translateY(0);
+  opacity:1;
+}
+
+.section h2{
+  color:#00f5d4;
+  margin-bottom:20px;
+}
+
+.section p{
+  line-height:1.9;
+  text-align:justify;
+}
+
+.highlight{
+  font-weight:bold;
+  color:#ffd166;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<ul>
+<li><a href="index.html">HOME</a></li>
+<li><a href="about.html">ABOUT ME</a></li>
+<li><a href="education.html">EDUCATION</a></li>
+<li><a href="experience.html">EXPERIENCE</a></li>
+<li><a href="skills.html">SKILLS</a></li>
+<li><a href="research.html">RESEARCH & PUBLICATIONS</a></li>
+</ul>
+</nav>
+</header>
+
+<div class="container">
+
+<h1>PROFESSIONAL EXPERIENCE</h1>
+
+<div class="section">
+<h2>Assistant Professor</h2>
+<p>
+<span class="highlight">Annamacharya Institute of Technology and Sciences (AITS), Rajampet, Andhra Pradesh</span>
+</p>
+<p>
+I served as an Assistant Professor contributing to academic excellence and institutional development while maintaining strong student engagement and performance standards.
+</p>
+</div>
+
+<div class="section">
+<h2>Teaching & Academic Responsibilities</h2>
+<p>
+Handled core and advanced subjects including DBMS, Data Warehousing and Data Mining, Full Stack Web Development, Java Programming, Computer Vision & Image Processing, Natural Language Processing, and IT Workshops focused on MS Office applications.
+</p>
+<p>
+My methodology emphasized conceptual clarity, practical implementation, real-time examples, hands-on sessions, and project-based learning.
+</p>
+</div>
+
+<div class="section">
+<h2>Student Mentorship & Academic Guidance</h2>
+<p>
+Mentored final-year students in innovative academic projects from ideation to execution. Provided career counseling, academic mentoring, and industry alignment guidance to ensure career readiness.
+</p>
+<p>
+Served as Class Teacher for fourth-year students, overseeing academic performance and administrative coordination.
+</p>
+</div>
+
+<div class="section">
+<h2>Institutional Contributions & Leadership Roles</h2>
+<p>
+Coordinated placement training programs to enhance aptitude, technical skills, and interview readiness. Led social service activities as NSS Coordinator, promoting leadership and teamwork.
+</p>
+<p>
+Organized entrepreneurship development initiatives in collaboration with external organizations to promote startup awareness and innovation culture.
+</p>
+</div>
+
+<div class="section">
+<h2>Professional Growth & Impact</h2>
+<p>
+This role strengthened my leadership, communication, and organizational abilities while allowing me to bridge theoretical knowledge with real-world application, preparing students to confidently face industry challenges.
+</p>
+</div>
+
+</div>
+
+<script>
+const sections = document.querySelectorAll('.section');
+
+window.addEventListener('scroll', () => {
+  const triggerBottom = window.innerHeight * 0.85;
+
+  sections.forEach(sec => {
+    const secTop = sec.getBoundingClientRect().top;
+
+    if(secTop < triggerBottom){
+      sec.classList.add('show');
+    }
+  });
+});
+</script>
+
+</body>
+</html>

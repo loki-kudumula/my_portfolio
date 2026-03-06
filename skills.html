@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Skills - Lokeswar Reddy</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+body{
+  min-height:100vh;
+      background:linear-gradient(135deg,#141e30,#243b55);
+      color:white;
+}
+
+/* Navbar */
+header{
+  padding:20px 50px;
+  display:flex;
+  justify-content:flex-end;
+  background:rgba(0,0,0,0.5);
+  position:fixed;
+  width:100%;
+  top:0;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:25px;
+}
+
+nav ul li a{
+  text-decoration:none;
+  color:white;
+  transition:0.3s;
+}
+
+nav ul li a:hover{
+  color:#00d4ff;
+}
+
+/* Container */
+.container{
+  width:85%;
+  margin:120px auto;
+}
+
+h1{
+  text-align:center;
+  margin-bottom:60px;
+  font-size:2.8rem;
+}
+
+/* Skill Boxes */
+.skills-wrapper{
+  display:flex;
+  gap:20px;
+}
+
+.skill-title{
+  width:30%;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.skill-title div{
+  padding:15px;
+  background:rgba(255,255,255,0.1);
+  border-radius:10px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.skill-title div:hover{
+  background:#00d4ff;
+  color:black;
+  transform:scale(1.05);
+}
+
+/* Skill Content */
+.skill-content{
+  width:70%;
+  background:rgba(255,255,255,0.08);
+  padding:30px;
+  border-radius:15px;
+  min-height:250px;
+  line-height:1.9;
+  text-align:justify;
+  transition:0.5s ease;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<ul>
+<li><a href="index.html">HOME</a></li>
+<li><a href="about.html">ABOUT ME</a></li>
+<li><a href="education.html">EDUCATION</a></li>
+<li><a href="experience.html">EXPERIENCE</a></li>
+<li><a href="skills.html">SKILLS</a></li>
+<li><a href="research.html">RESEARCH & PUBLICATIONS</a></li>
+</ul>
+</nav>
+</header>
+
+<div class="container">
+
+<h1>SKILLS</h1>
+
+<div class="skills-wrapper">
+
+<div class="skill-title">
+<div onmouseover="showContent(1)">Core Computer Science</div>
+<div onmouseover="showContent(2)">Full Stack Development</div>
+<div onmouseover="showContent(3)">Programming & AI</div>
+<div onmouseover="showContent(4)">Leadership & Mentoring</div>
+<div onmouseover="showContent(5)">Continuous Learning</div>
+</div>
+
+<div class="skill-content" id="content">
+Hover over a skill to see details here.
+</div>
+
+</div>
+</div>
+
+<script>
+function showContent(num){
+  const content = document.getElementById("content");
+
+  if(num === 1){
+    content.innerHTML = `
+    I have strong knowledge in core Computer Science subjects including Database Management Systems (DBMS), Data Warehousing and Data Mining (DWDM), and Software Development concepts. I am proficient in SQL and PL/SQL for database design, querying, and data management.
+    `;
+  }
+
+  if(num === 2){
+    content.innerHTML = `
+    I have practical experience in Full Stack Web Development using HTML, CSS, and JavaScript. I am comfortable building responsive and structured web applications with clean UI design and proper project structure.
+    `;
+  }
+
+  if(num === 3){
+    content.innerHTML = `
+    I have programming knowledge in Java and strong understanding of Object-Oriented Programming concepts. My academic interest includes Artificial Intelligence domains such as Computer Vision and Natural Language Processing with focus on theoretical and practical implementation.
+    `;
+  }
+
+  if(num === 4){
+    content.innerHTML = `
+    Apart from technical expertise, I possess strong communication, mentoring, and leadership abilities. I have experience guiding student projects, conducting training programs, coordinating academic activities, and supporting placement preparation initiatives.
+    `;
+  }
+
+  if(num === 5){
+    content.innerHTML = `
+    I am a continuous learner who regularly updates my knowledge with emerging technologies and industry practices to stay aligned with real-world demands.
+    `;
+  }
+}
+</script>
+
+</body>
+</html>

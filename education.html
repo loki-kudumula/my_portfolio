@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Education - KUDUMULA LOKESWAR REDDY</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* Reset and Global Font */
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+  color:white;
+}
+
+/* Body */
+body {
+  min-height:100vh;
+  background:linear-gradient(135deg,#141e30,#243b55);
+  font-size:16px;       /* matches index/about */
+  line-height:1.6;      /* matches index/about */
+  text-align:center;
+}
+
+/* Headings */
+h1 {
+  font-size:2.5rem;
+  letter-spacing:2px;
+  font-weight:700;
+  margin-bottom:20px;   /* matches other pages */
+}
+
+h2 {
+  font-size:1.8rem;
+  color:#ffdd59;
+  margin-bottom:10px;
+  font-weight:600;
+}
+
+h3 {
+  font-size:1.2rem;
+  font-weight:500;
+  margin-bottom:10px;
+}
+
+p {
+  font-size:1.0rem;
+  line-height:1.6;       /* consistent with About page */
+  text-align:justify;
+}
+
+/* Header Navbar */
+header {
+  width:100%;
+  padding:20px 50px;
+  display:flex;
+  justify-content:flex-end;
+  background:rgba(0,0,0,0.4);
+  position:fixed;
+  top:0;
+  z-index:1000;
+}
+
+nav ul {
+  list-style:none;
+  display:flex;
+  gap:25px;
+}
+
+nav ul li a {
+  text-decoration:none;
+  color:white;
+  font-weight:500;
+  font-size:1.05rem;
+  transition:0.3s;
+}
+
+nav ul li a:hover {
+  color:#ffdd59;
+}
+
+/* Container */
+.container {
+  width:85%;
+  margin:120px auto;
+  text-align:center;
+}
+
+/* Education Cards */
+.edu-card {
+  background:rgba(0,0,0,0.3);
+  padding:20px;           /* slightly smaller for uniform look */
+  border-radius:15px;
+  margin-bottom:40px;
+  opacity:0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+  box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+
+.edu-card.show {
+  opacity:1;
+  transform: translateY(0);
+}
+
+/* Gallery */
+#gallery-btn {
+  margin-top:15px;
+  padding:10px 15px;
+  border:none;
+  background:#ffdd59;
+  color:#000;
+  border-radius:5px;
+  cursor:pointer;
+  font-weight:600;
+  font-size:1rem;
+}
+
+#gallery {
+  display:none;
+  margin-top:20px;
+  flex-wrap:wrap;
+  gap:15px;
+  justify-content:center;
+}
+
+#gallery img {
+  width:150px;
+  border-radius:10px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+#gallery img:hover {
+  transform:scale(1.05);
+}
+
+/* Lightbox */
+#lightbox {
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.85);
+  justify-content:center;
+  align-items:center;
+  z-index:1000;
+}
+
+#lightbox img {
+  max-width:90%;
+  max-height:90%;
+  border-radius:10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<ul>
+<li><a href="index.html">HOME</a></li>
+<li><a href="about.html">ABOUT ME</a></li>
+<li><a href="education.html">EDUCATION</a></li>
+<li><a href="experience.html">EXPERIENCE</a></li>
+<li><a href="skills.html">SKILLS</a></li>
+<li><a href="research.html">RESEARCH & PUBLICATIONS</a></li>
+</ul>
+</nav>
+</header>
+
+<div class="container">
+<h1>EDUCATION</h1>
+
+<div class="edu-card">
+<h2>Master of Technology (M.Tech)</h2>
+<h3>2024 – 2026 (Pursuing)</h3>
+<p>
+Pursuing M.Tech in Computer Science & Engineering at Srinivasa Institute of Technology and Science (SITS), Kadapa. Focused on advanced computing, AI, and research. Developing strong technical and analytical skills.
+</p>
+</div>
+
+<div class="edu-card">
+<h2>Master of Computer Applications (MCA)</h2>
+<h3>2021 – 2023</h3>
+<p>
+I completed my Master of Computer Applications from Annamacharya Institute of Technology & Sciences (AITS), Rajampet. During my studies, I developed strong skills in programming, database management, web technologies, and software development, which strengthened my technical foundation and fueled my passion for computer science.
+</p>
+
+<button id="gallery-btn">View MCA Memories 📸</button>
+
+<div id="gallery">
+  <img src="mca1.jpeg" alt="MCA Memory 1">
+  <img src="mca2.jpeg" alt="MCA Memory 2">
+  <img src="mca3.jpeg" alt="MCA Memory 3">
+  <img src="mca4.jpeg" alt="MCA Memory 4">
+  <img src="mca5.jpeg" alt="MCA Memory 5">
+  <img src="mca6.jpeg" alt="MCA Memory 6">
+</div>
+</div>
+
+<div class="edu-card">
+<h2>Bachelor of Business Administration (BBA)</h2>
+<h3>2018 – 2021</h3>
+<p>
+I completed my Bachelor of Business Administration from Loyola Degree College, affiliated with Yogi Vemana University, Kadapa. My studies gave me a strong foundation in management, leadership, organizational behavior, and communication, helping me develop practical skills for working in organizations.
+</p>
+</div>
+
+</div>
+
+<div id="lightbox">
+  <img src="" alt="Expanded">
+</div>
+
+<script>
+const cards = document.querySelectorAll('.edu-card');
+
+function revealCardsSequentially() {
+  let delay = 0;
+  cards.forEach(card => {
+    setTimeout(() => {
+      card.classList.add('show');
+    }, delay);
+    delay += 500;
+  });
+}
+
+window.addEventListener('scroll', () => {
+  const containerTop = document.querySelector('.container').getBoundingClientRect().top;
+  if(containerTop < window.innerHeight * 0.9){
+    revealCardsSequentially();
+  }
+}, {once:true});
+
+const galleryBtn = document.getElementById('gallery-btn');
+const gallery = document.getElementById('gallery');
+
+galleryBtn.addEventListener('click', () => {
+  gallery.style.display = gallery.style.display === 'none' ? 'flex' : 'none';
+});
+
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = lightbox.querySelector('img');
+
+document.querySelectorAll('#gallery img').forEach(img => {
+  img.addEventListener('click', () => {
+    lightbox.style.display = 'flex';
+    lightboxImg.src = img.src;
+  });
+});
+
+lightbox.addEventListener('click', () => {
+  lightbox.style.display = 'none';
+});
+</script>
+
+</body>
+</html>
